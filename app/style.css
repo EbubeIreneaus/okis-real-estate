@@ -1,0 +1,34 @@
+.headerSlideDown {
+  position: fixed !important;
+  top: 0 !important;
+  display: none;
+}
+
+@keyframes headerDown {
+  from {
+    transform: translateY(-200);
+    
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.d-link:hover .d-links{
+    opacity: 1;
+    max-height: 10900px !important;
+  }
+  .heroo .swiper::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a;
+    opacity: .8;
+    z-index: 1;
+  }
+
+  .property:hover .image{
+    transform: scale(1.4) rotate(25deg);
+  }
