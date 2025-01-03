@@ -7,6 +7,7 @@ import { AOSRefresh } from "@/lib/aos";
 import "swiper/css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const HeroSection = () => {
 
@@ -59,14 +60,14 @@ const HeroSection = () => {
                                             Nobis, ipsum numquam tempore suscipit qui non praesentium
                                             soluta magni corporis aut.
                                         </p>
-                                        <button
+                                        <Link href='/properties'
                                             className="btn btn-accent px-10 mt-10 rounded-sm hover:btn-secondary"
                                             data-aos="fade-up"
                                             data-aos-delay="200"
                                         >
                                             Get Started{" "}
                                             <FontAwesomeIcon icon={faArrowRight} beatFade />
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -104,13 +105,13 @@ const HeroSection = () => {
                                             Nobis, ipsum numquam tempore suscipit qui non praesentium
                                             soluta magni corporis aut.
                                         </p>
-                                        <button
+                                        <Link href="/contact#appointment"
                                             className="btn btn-secondary px-10 mt-10 rounded-sm text-white hover:btn-accent"
                                             data-aos="fade-up"
                                         >
                                             Book Appointment{" "}
                                             <FontAwesomeIcon icon={faArrowRight} beatFade />
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -148,13 +149,13 @@ const HeroSection = () => {
                                             Nobis, ipsum numquam tempore suscipit qui non praesentium
                                             soluta magni corporis aut.
                                         </p>
-                                        <button
+                                        <Link href="/properties"
                                             className="btn bg-gradient-to-r from-secondary to-primary px-10 mt-10  hover:opacity-80 border-0 rounded-sm text-white"
                                             data-aos="fade-up"
                                         >
-                                            Book Appointment{" "}
+                                            Get Started{" "}
                                             <FontAwesomeIcon icon={faArrowRight} beatFade />
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

@@ -36,7 +36,7 @@ export default function PropertyTypeSection() {
                 spacious family home, we have options to match your needs.
               </p>
               <Link
-                href=""
+                href="/properties?p=appartment"
                 className="btn bg-gradient-to-r from-secondary to-primary rounded-sm text-base-100 px-5"
               >
                 Browse Appartment{" "}
@@ -61,10 +61,10 @@ export default function PropertyTypeSection() {
                 sellers with the best opportunities.
               </p>
               <Link
-                href=""
+                href="/contact"
                 className="btn bg-gradient-to-tr from-secondary to-primary rounded-sm text-base-100 px-5"
               >
-                Learn More{" "}
+                Contact Us{" "}
                 <FontAwesomeIcon icon={faArrowRight} beatFade />
               </Link>
             </article>
@@ -86,7 +86,7 @@ export default function PropertyTypeSection() {
                 relax and enjoy the returns.
               </p>
               <Link
-                href=""
+                href="/contact"
                 className="btn bg-gradient-to-tr from-secondary to-primary rounded-sm text-base-100 px-5"
               >
                 Contact Us{" "}
@@ -111,10 +111,10 @@ export default function PropertyTypeSection() {
                 for your vision
               </p>
               <Link
-                href=""
+                href="/properties?p=land"
                 className="btn bg-gradient-to-tr from-secondary to-primary rounded-sm text-base-100 px-5"
               >
-                Learn More{" "}
+                Get Started{" "}
                 <FontAwesomeIcon icon={faArrowRight} beatFade />
               </Link>
             </article>
@@ -135,7 +135,7 @@ export default function PropertyTypeSection() {
                 and the best opportunities tailored to your goals.
               </p>
               <Link
-                href=""
+                href="/properties#appointment"
                 className="btn bg-gradient-to-tr from-secondary to-primary rounded-sm text-base-100 px-5"
               >
                 Book Appoitment{" "}
@@ -160,7 +160,7 @@ export default function PropertyTypeSection() {
                 and industrial projects.
               </p>
               <Link
-                href=""
+                href="/contact"
                 className="btn bg-gradient-to-tr from-secondary to-primary rounded-sm text-base-100 px-5"
               >
                 Contact Us{" "}
