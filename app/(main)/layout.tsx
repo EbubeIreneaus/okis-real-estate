@@ -27,7 +27,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   }
 
   useEffect(() => {
-    const link = document.querySelector('.n-s-l')
+    const links = document.querySelectorAll('.n-s-l')
     function handleScroll() {
       if (window.scrollY >= 300) {
         activateHeader();
@@ -37,9 +37,11 @@ function Layout({ children }: { children: React.ReactNode }) {
     }
   
     window.addEventListener("scroll", handleScroll);
-    link?.addEventListener('click', toggleNav)
-    
 
+    links?.forEach(link => {
+      link.addEventListener('click', toggleNav)
+    })
+    
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
