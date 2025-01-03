@@ -57,9 +57,9 @@ function Layout({ children }: { children: React.ReactNode }) {
       name: "properties",
       href: "/listing",
       children: [
-        { name: "appartment", href: "/listing?s=appartment", children: [] },
-        { name: "office", href: "/listing?s=office", children: [] },
-        { name: "land", href: "/listing?s=land", children: [] },
+        { name: "appartment", href: "/listing?property=appartment", children: [] },
+        { name: "office", href: "/listing?property=office", children: [] },
+        { name: "land", href: "/listing?property=land", children: [] },
       ],
     },
     { name: "blog", href: "#", children: [] },

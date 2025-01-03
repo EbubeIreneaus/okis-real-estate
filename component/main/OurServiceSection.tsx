@@ -36,7 +36,7 @@ export default function PropertyTypeSection() {
                 spacious family home, we have options to match your needs.
               </p>
               <Link
-                href="/properties?p=appartment"
+                href="/listing?property=appartment"
                 className="btn bg-gradient-to-r from-secondary to-primary rounded-sm text-base-100 px-5"
               >
                 Browse Appartment{" "}
@@ -111,7 +111,7 @@ export default function PropertyTypeSection() {
                 for your vision
               </p>
               <Link
-                href="/properties?p=land"
+                href="/listing?property=land"
                 className="btn bg-gradient-to-tr from-secondary to-primary rounded-sm text-base-100 px-5"
               >
                 Get Started{" "}
@@ -135,7 +135,7 @@ export default function PropertyTypeSection() {
                 and the best opportunities tailored to your goals.
               </p>
               <Link
-                href="/properties#appointment"
+                href="/contact#appointment"
                 className="btn bg-gradient-to-tr from-secondary to-primary rounded-sm text-base-100 px-5"
               >
                 Book Appoitment{" "}

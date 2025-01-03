@@ -60,7 +60,7 @@ const HeroSection = () => {
                                             Nobis, ipsum numquam tempore suscipit qui non praesentium
                                             soluta magni corporis aut.
                                         </p>
-                                        <Link href='/properties'
+                                        <Link href='/listing'
                                             className="btn btn-accent px-10 mt-10 rounded-sm hover:btn-secondary"
                                             data-aos="fade-up"
                                             data-aos-delay="200"
@@ -149,7 +149,7 @@ const HeroSection = () => {
                                             Nobis, ipsum numquam tempore suscipit qui non praesentium
                                             soluta magni corporis aut.
                                         </p>
-                                        <Link href="/properties"
+                                        <Link href="/listing"
                                             className="btn bg-gradient-to-r from-secondary to-primary px-10 mt-10  hover:opacity-80 border-0 rounded-sm text-white"
                                             data-aos="fade-up"
                                         >
