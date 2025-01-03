@@ -31,7 +31,7 @@ export default function Listing() {
               </div>
 
               <div>
-                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-7 px-5">
+                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-7 px-2">
                   {PTS.map((property) => (
                     <SingleProperty key={property.id} property={property} />
                   ))}
