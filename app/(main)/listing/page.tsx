@@ -21,7 +21,7 @@ export default function Listing() {
         <div className="">
           <div className="lg:px-12 sm:px-5 px-2">
             <div>
-              <div className=" border rounded-xl flex items-center justify-between my-10 px-10  py-2">
+              <div className=" border rounded-xl flex items-center justify-between my-10 md:px-10 px-3 py-2">
                 <h4 className="badge px-5 badge-lg font-semibold ">
                   Found 21 Result
                 </h4>
@@ -31,7 +31,7 @@ export default function Listing() {
               </div>
 
               <div>
-                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-7">
+                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-7 px-5">
                   {PTS.map((property) => (
                     <SingleProperty key={property.id} property={property} />
                   ))}
