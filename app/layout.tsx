@@ -1,13 +1,11 @@
-"use client";
-import { useEffect } from "react";
+
 import "./globals.css";
 import "./style.css";
-import { AOSInit } from "@/lib/aos";
-import "aos/dist/aos.css";
+
 import { Metadata } from "next";
 
 const title =
-  "OKI'S Real Estate, Building Construction & Renovation and Property Management Firm";
+  "OKI'S Real Estate, Building Construction & Renovation - Property Management Firm";
 export const metadata: Metadata = {
   title: title,
   authors: [
@@ -30,9 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  useEffect(() => {
-    AOSInit();
-  }, []);
+
 
   return (
     <html lang="en">

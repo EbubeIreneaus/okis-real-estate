@@ -4,6 +4,8 @@ import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { AOSInit } from "@/lib/aos";
+import "aos/dist/aos.css";
 
 function Layout({ children }: { children: React.ReactNode }) {
   function activateHeader() {
@@ -27,6 +29,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   }
 
   useEffect(() => {
+    AOSInit()
     const links = document.querySelectorAll('.n-s-l')
     function handleScroll() {
       if (window.scrollY >= 300) {
