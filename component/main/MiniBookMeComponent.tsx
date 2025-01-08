@@ -1,6 +1,7 @@
 import { faCalendarAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function MiniBookMeComponent() {
@@ -29,8 +30,8 @@ function MiniBookMeComponent() {
                   vero ipsum sit sit diam justo sed vero dolor duo.
                 </p>
                 <div className="mt-7 md:mt-5 flex flex-col sm:flex-row gap-4">
-                    <button className="btn btn-accent"><FontAwesomeIcon icon={faPhone} /> Make a call</button>
-                    <button className="btn btn-secondary text-base-100"><FontAwesomeIcon icon={faCalendarAlt} /> Book Appointment</button>
+                    <a href="tel:+2348061982520" target="_blank" rel="" className="btn btn-accent"><FontAwesomeIcon icon={faPhone} /> Make a call</a>
+                    <Link href="/contact" className="btn btn-secondary text-base-100"><FontAwesomeIcon icon={faCalendarAlt} /> Book Appointment</Link>
                 </div>
               </div>
             </div>

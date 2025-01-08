@@ -38,7 +38,7 @@ export default function SingleProperty({
                 <span><FontAwesomeIcon icon={faBed} className="text-secondary" /> {property.beds || 0}</span>
                 <span><FontAwesomeIcon icon={faBath} className="text-secondary" /> {property.bathroom || 0}</span>
             </div>
-            <Link href={`property.id`} className="btn btn-outline btn-accent px-10" >see details</Link>
+            <Link href={'/listing/'+property.id} className="btn btn-outline btn-accent px-10" >see details</Link>
         </div>
       </div>
     </div>

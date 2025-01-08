@@ -4,8 +4,7 @@ import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { AOSInit } from "@/lib/aos";
-import "aos/dist/aos.css";
+import InitAos from "@/component/main/InitAos";
 
 function Layout({ children }: { children: React.ReactNode }) {
   function activateHeader() {
@@ -28,23 +27,25 @@ function Layout({ children }: { children: React.ReactNode }) {
     nav?.classList.toggle("!opacity-100");
   }
 
-  useEffect(() => {
-    AOSInit()
-    const links = document.querySelectorAll('.n-s-l')
-    function handleScroll() {
-      if (window.scrollY >= 300) {
-        activateHeader();
-      } else {
-        deactivateHeader();
-      }
+  function handleScroll() {
+    if (window.scrollY >= 300) {
+      activateHeader();
+    } else {
+      deactivateHeader();
     }
-  
+  }
+
+ 
+
+  useEffect(() => {
+    const links = document.querySelectorAll(".n-s-l");
+
+    links?.forEach((link) => {
+      link.addEventListener("click", toggleNav);
+    });
+    
     window.addEventListener("scroll", handleScroll);
 
-    links?.forEach(link => {
-      link.addEventListener('click', toggleNav)
-    })
-    
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -60,7 +61,11 @@ function Layout({ children }: { children: React.ReactNode }) {
       name: "properties",
       href: "/listing",
       children: [
-        { name: "appartment", href: "/listing?property=appartment", children: [] },
+        {
+          name: "appartment",
+          href: "/listing?property=appartment",
+          children: [],
+        },
         { name: "office", href: "/listing?property=office", children: [] },
         { name: "land", href: "/listing?property=land", children: [] },
       ],
@@ -133,17 +138,31 @@ function Layout({ children }: { children: React.ReactNode }) {
             <ul className="menu menu-lg bg-accent text-capitalize">
               {navLinks.map((link) =>
                 link.children.length < 1 ? (
-                  <Link href={link.href} key={link.name} className="bg-primary n-s-l">
-                    <li className="px-2 py-3 capitalize font-semibold hover:bg-slate-950/20 rounded-md text-lg ">{link.name}</li>
+                  <Link
+                    href={link.href}
+                    key={link.name}
+                    className="bg-primary n-s-l"
+                  >
+                    <li className="px-2 py-3 capitalize font-semibold hover:bg-slate-950/20 rounded-md text-lg ">
+                      {link.name}
+                    </li>
                   </Link>
                 ) : (
-                  <li key={link.name} >
+                  <li key={link.name}>
                     <details open className="w-full">
-                      <summary className="ps-1.5 capitalize w-full text-lg font-semibold">{link.name}</summary>
+                      <summary className="ps-1.5 capitalize w-full text-lg font-semibold">
+                        {link.name}
+                      </summary>
                       <ul>
                         {link.children.map((link) => (
-                          <Link href={link.href} key={link.name} className="bg-primary n-s-l">
-                            <li className="p-2 capitalize hover:bg-slate-950/10 rounded-md text-lg font-semibold">{link.name}</li>
+                          <Link
+                            href={link.href}
+                            key={link.name}
+                            className="bg-primary n-s-l"
+                          >
+                            <li className="p-2 capitalize hover:bg-slate-950/10 rounded-md text-lg font-semibold">
+                              {link.name}
+                            </li>
                           </Link>
                         ))}
                       </ul>
@@ -156,7 +175,10 @@ function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </header>
 
-      <main className="text-slate-800">{children}</main>
+      <main className="text-slate-800">
+        <InitAos />
+        {children}
+      </main>
 
       <footer className="bg-primary  py-4 px-3">
         <div className="container mx-auto flex flex-wrap items-center justify-between">
