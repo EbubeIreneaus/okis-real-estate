@@ -14,14 +14,16 @@ import {
 import { Rating, ThinStar } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import Link from "next/link";
+import SingleProperty from "@/component/main/SingleProperty";
 
-export default async function SingleProperty({
+export default async function SinglePropertyListing({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const propertyId = (await params).id;
   const property = Properties.find((pr) => pr.id == Number(propertyId));
+  const related = Properties.filter(pr => pr.state == property?.state)
   let title = "";
   if (property?.property == "apartment") {
     title = `${property.beds} Bedroom Appartment for ${
@@ -54,7 +56,7 @@ export default async function SingleProperty({
           </Suspense>
           <div>
             <div>
-              <h2 className="text-4xl font-extrabold">{title}</h2>
+              <h2 className="text-4xl font-extrabold capitalize">{title}</h2>
               <ul className="*:font-semibold flex flex-wrap my-3 px-3 gap-x-5">
                 <li className="list-item">
                   <span>
@@ -128,6 +130,18 @@ export default async function SingleProperty({
             </div>
           </div>
         </div>
+
+        <div className="mt-20">
+          <h3 className="text-4xl font-extrabold mb-7 px-3">Related Properties</h3>
+            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-7 gap-x-3">
+                  {
+                    related.map(re => (
+                      <SingleProperty key={re.id} property={re} />
+                    ))
+                  }
+            </div>
+          </div>
+
       </div>
     </div>
   );
